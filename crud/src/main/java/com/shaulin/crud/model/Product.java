@@ -6,12 +6,12 @@ import jakarta.persistence.*;
 public class Product{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     private Long price;
 
-    public Product(Integer id, Long price, String name) {
+    public Product() {
         this.id = id;
         this.price = price;
         this.name = name;
